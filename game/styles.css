@@ -1,0 +1,195 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    margin: 20px;
+}
+
+.welcome-container, .editor-container, .game-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-container {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border-bottom: 1px solid #ccc;
+    display: none; 
+}
+
+.editor-container {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border-bottom: 1px solid #ccc;
+}
+
+.game-container {
+    background: linear-gradient(135deg, #dcedc8, #c5e1a5);
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4caf50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.section-title i {
+    margin-right: 10px;
+}
+
+#code-editor {
+    width: 100%;
+    height: 300px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fff;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#run-button, #try-again-button, #instructions-button, #start-game-button {
+    display: block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #4caf50, #388e3c);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+#run-button:hover, #try-again-button:hover, #instructions-button:hover, #start-game-button:hover {
+    background: linear-gradient(135deg, #388e3c, #2e7d32);
+    transform: translateY(-2px);
+}
+
+#run-button:active, #try-again-button:active, #instructions-button:active, #start-game-button:active {
+    transform: translateY(0);
+}
+
+#run-button i, #try-again-button i, #instructions-button i, #start-game-button i {
+    margin-right: 10px;
+}
+
+#game-canvas {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    max-height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+#result-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.difficulty-selection {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.difficulty-selection label {
+    margin-right: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.difficulty-selection label i {
+    margin-right: 5px;
+}
+
+.difficulty-selection select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.swal2-confirm {
+    background: linear-gradient(135deg, #4caf50, #388e3c) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    transition: background 0.3s ease, transform 0.2s ease !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+.swal2-confirm:hover {
+    background: linear-gradient(135deg, #388e3c, #2e7d32) !important;
+    transform: translateY(-2px) !important;
+}
+
+.swal2-confirm:active {
+    transform: translateY(0) !important;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .editor-container {
+        border-right: 1px solid #ccc;
+        border-bottom: none;
+    }
+
+    .welcome-container {
+        display: flex; 
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-top: 20px; 
+    }
+
+    .welcome-container {
+        display: none; 
+    }
+}
+
+.player-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
